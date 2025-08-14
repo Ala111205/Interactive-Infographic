@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./infographic.css" />
+  <title>Infographic</title>
+</head>
+<body>
+  <div class="web">
+    <div class="container">
+      <h1>Energy Production Charts</h1>
+      <div class="controls">
+          <button data-type="all">All</button>
+          <button data-type="solar">Solar</button>
+          <button data-type="wind">Wind</button>
+          <button data-type="hydro">Hydro</button>
+          <button data-type="geo">Geo</button>
+      </div>
+      <div class="charts">
+        <canvas id="linechart" ></canvas>
+        <canvas id="barchart" ></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+  <script src="./infographic.js"></script>
+</body>
+</html>

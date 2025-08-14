@@ -1,0 +1,91 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root{
+  color: rgb(12, 12, 150);
+  --pcolor: blue;
+  --scolor: rgb(72, 72, 209);
+  --tcolor: black;
+}
+
+.container{
+  width:100%;
+  min-height: 100vh;
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+
+.controls{
+  width:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+
+.controls button{
+  padding:7px;
+  color: var(--tcolor);
+  background-color: var(--pcolor);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.controls button:hover{
+  background-color: var(--scolor);
+}
+
+.charts{
+  width:80%;
+  position: relative;
+  min-height:450px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+
+canvas{
+  width: 100% !important;
+  height: auto;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 2px 1px var(--tcolor);
+}
+
+@media only screen and (max-width:1100px){
+  .charts{
+    width:90%
+  }
+}
+
+@media only screen and (max-width:900px){
+  .charts{
+    width:100%
+  }
+}
+
+@media only screen and (max-width:700px){
+  canvas{
+    padding:8px
+  }
+}
+
+@media only screen and (max-width:500px){
+  .container{
+    padding: 10px;
+  }
+  canvas{
+    padding:2px;
+    height: 250px !important;
+  }
+}
